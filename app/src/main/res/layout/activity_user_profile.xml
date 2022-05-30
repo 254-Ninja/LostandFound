@@ -11,15 +11,29 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="400dp">
+
         <LinearLayout
             android:background="@drawable/gradientbackground"
             android:layout_width="match_parent"
-            android:layout_height="345dp">
+            android:layout_height="345dp"
+            android:orientation="vertical">
 
             <ImageView
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_width="142dp"
                 android:layout_height="146dp"
-                android:src="@drawable/circleimage" />
+                android:src="@drawable/circleimage"/>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dennis Muthomi"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="21SP"/>
 
         </LinearLayout>
 
