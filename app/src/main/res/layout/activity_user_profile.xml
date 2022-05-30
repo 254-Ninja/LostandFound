@@ -10,6 +10,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"></RelativeLayout>
+        android:layout_height="400dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="345dp">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
 
 </LinearLayout>
