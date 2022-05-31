@@ -36,6 +36,7 @@
                 android:textSize="21sp"/>
 
         </LinearLayout>
+
         <androidx.cardview.widget.CardView
             android:layout_width="360dp"
             android:layout_height="90dp"
@@ -47,21 +48,34 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="3">
+
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Lost Items"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Location"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="35dp"
+                        android:text="Country:"
                         android:textSize="20sp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="30"
-                        android:textSize="20sp"/>
+                        android:paddingLeft="35dp"
+                        android:text="City:"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
