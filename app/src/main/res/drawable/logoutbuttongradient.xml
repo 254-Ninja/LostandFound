@@ -4,4 +4,11 @@
         android:startColor="@color/starBlue"
         android:endcolor="@color/endBlue"/>
 
+    <corners android:radius="45dp"/>
+    <padding android:bottom="15dp"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="15dp"/>
+
+
 </shape>

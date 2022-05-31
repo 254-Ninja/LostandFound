@@ -154,7 +154,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:layout_gravity="center_horizontal"
-            android:text="Log Out"/>
+            android:text="Log Out"
+            android:background="@drawable/logoutbuttongradient"
+            android:textColor="#fff"/>
 
     </LinearLayout>
 
