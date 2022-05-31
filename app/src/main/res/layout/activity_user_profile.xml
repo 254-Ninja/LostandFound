@@ -105,7 +105,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="22dp"
-                android:text="+254717936712"
+                android:text="+254 717 936 712"
+                android:textStyle="bold"
                 android:layout_gravity="center_vertical"/>
         </LinearLayout>
 
@@ -113,7 +114,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="35dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
 
             <ImageView
                 android:layout_width="36dp"
@@ -124,9 +126,11 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="22dp"
                 android:text="muthomidenis@yahoo.com"
+                android:textStyle="bold"
                 android:layout_gravity="center_vertical"/>
         </LinearLayout>
         <LinearLayout
+            android:layout_marginTop="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="35dp"
@@ -137,6 +141,7 @@
                 android:layout_height="36dp"
                 android:src="@drawable/ic_baseline_twitter_24"/>
             <TextView
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="22dp"
@@ -144,7 +149,15 @@
                 android:layout_gravity="center_vertical"/>
         </LinearLayout>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Log Out"/>
+
     </LinearLayout>
+
 
 
 </LinearLayout>
