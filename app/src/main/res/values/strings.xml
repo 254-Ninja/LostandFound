@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="user_name">Dennis Muthomi</string>
+    <string name="user_location">Location</string>
+    <string name="user_country">Country:</string>
+    <string name="user_city">City:</string>
+    <string name="user_phone_number">+254 717 936 712</string>
+    <string name="user_email">muthomidenis@yahoo.com</string>
+    <string name="user_twitter_id">snipes_254</string>
+    <string name="log_out_app">Log Out</string>
 </resources>

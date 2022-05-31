@@ -30,7 +30,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dennis Muthomi"
+                android:text="@string/user_name"
                 android:textStyle="bold"
                 android:textColor="#fff"
                 android:textSize="21sp"/>
@@ -59,7 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="Location"
+                        android:text="@string/user_location"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="20sp" />
@@ -68,13 +68,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="35dp"
-                        android:text="Country:"
+                        android:text="@string/user_country"
                         android:textSize="20sp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="35dp"
-                        android:text="City:"
+                        android:text="@string/user_city"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="22dp"
-                android:text="+254 717 936 712"
+                android:text="@string/user_phone_number"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"/>
         </LinearLayout>
@@ -125,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="22dp"
-                android:text="muthomidenis@yahoo.com"
+                android:text="@string/user_email"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"/>
         </LinearLayout>
@@ -145,7 +145,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="22dp"
-                android:text="snipes_254"
+                android:text="@string/user_twitter_id"
                 android:layout_gravity="center_vertical"/>
         </LinearLayout>
 
@@ -154,7 +154,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:layout_gravity="center_horizontal"
-            android:text="Log Out"
+            android:text="@string/log_out_app"
             android:background="@drawable/logoutbuttongradient"
             android:textColor="#fff"/>
 
