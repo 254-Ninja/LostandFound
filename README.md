@@ -29,7 +29,7 @@ User Page
 
 My first tab will be the user profile. It is the page that allows you to access the app. It consists of a simple profile indicating your name and contacts.
 
-
+![User profile]{LostandFound\app\src\main\res\drawable\Screenshot (147).png}
 
 
 Reporting form page
