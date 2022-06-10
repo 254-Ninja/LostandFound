@@ -8,4 +8,10 @@
     <string name="user_email">muthomidenis@yahoo.com</string>
     <string name="user_twitter_id">snipes_254</string>
     <string name="log_out_app">Log Out</string>
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="next1">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="next" />
 </resources>
