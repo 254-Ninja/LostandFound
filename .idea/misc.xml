@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/LostandFound/app/src/main/res/drawable/gradientbackground.xml" value="0.22974358974358974" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/LostandFound/app/src/main/res/layout/activity_user_profile.xml" value="0.10562310030395136" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/LostandFound/app/src/main/res/drawable/logoutbuttongradient.xml" value="0.17314814814814813" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/LostandFound/app/src/main/res/layout/activity_main.xml" value="0.2128623188405797" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/LostandFound/app/src/main/res/layout/activity_user_profile.xml" value="0.2128623188405797" />
         <entry key="..\:/Users/User/AndroidStudioProjects/LostandFound/app/src/main/res/layout/activity_welcome.xml" value="0.2171875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/LostandFound/app/src/main/res/layout/welcome_slide1.xml" value="0.2171875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/LostandFound/app/src/main/res/layout/welcome_slide2.xml" value="0.2171875" />
