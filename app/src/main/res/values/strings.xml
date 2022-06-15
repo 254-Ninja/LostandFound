@@ -15,4 +15,5 @@
     <string name="start">GOT IT</string>
     <string name="next" />
     <string name="username">username</string>
+    <string name="password">password</string>
 </resources>
