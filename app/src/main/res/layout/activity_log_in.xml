@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".LogIn">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426"
+        tools:layout_editor_absoluteX="0dp">
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutUsername"
         android:layout_width="match_parent"
@@ -24,4 +32,6 @@
             android:layout_height="wrap_content"
             tools:targetApi="jelly_bean" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
