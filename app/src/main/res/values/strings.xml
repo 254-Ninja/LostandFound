@@ -17,5 +17,9 @@
     <string name="username">username</string>
     <string name="password">password</string>
     <string name="login">login</string>
-    <string name="signuphere">signup here</string>
+    <string name="signuphere">Dont have an account? Signup here</string>
+    <string name="signup">Signup</string>
+    <string name="fullname">Full name</string>
+    <string name="email">Email</string>
+    <string name="loginhere">Already have an account? Login here</string>
 </resources>
