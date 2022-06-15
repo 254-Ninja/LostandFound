@@ -16,4 +16,6 @@
     <string name="next" />
     <string name="username">username</string>
     <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="signuphere">signup here</string>
 </resources>
