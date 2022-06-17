@@ -44,6 +44,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/fullname"
+                android:background="@color/grayLight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_perm_contact_calendar_24"
@@ -65,6 +66,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
+                android:background="@color/grayLight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_alternate_email_24"
@@ -86,6 +88,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/contact"
+                android:background="@color/grayLight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_phone_24"
@@ -109,6 +112,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/username"
+                android:background="@color/grayLight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_person_24"
@@ -128,6 +132,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password"
+                android:background="@color/grayLight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_lock_24"
