@@ -14,6 +14,10 @@ public class SignUp extends AppCompatActivity {
     private TextInputEditText fullname, email, contact, username, password;
     private Button buttonSignUp;
 
+    // Volley variables
+    private StringRequest mStringRequest;
+    private RequestQueue mRequestQueue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,5 +41,9 @@ public class SignUp extends AppCompatActivity {
 
     private void createUser(final String fullname,final String email, final String username, final String contact, final String password){
 
+    }
+
+    private String getBaseUrl (){
+        return "http://"+getResources().getString(R.string.machine_ip_address)+"/LoginRegister/signup.php";
     }
 }
