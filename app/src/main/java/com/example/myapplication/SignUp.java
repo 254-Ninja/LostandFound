@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,13 @@ public class SignUp extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         buttonSignUp = findViewById(R.id.buttonSignUp);
+
+        buttonSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createUser(fullname.getText().toString(),email.getText().toString(),username.getText().toString(),contact.getText().toString(),password.getText().toString());
+            }
+        });
 
     }
 
