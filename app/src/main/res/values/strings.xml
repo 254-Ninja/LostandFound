@@ -22,4 +22,6 @@
     <string name="fullname">Full name</string>
     <string name="email">Email</string>
     <string name="loginhere">Already have an account? Login here</string>
+
+    <string name="machine_ip_address">192.168.0.102</string>
 </resources>
