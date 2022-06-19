@@ -35,5 +35,7 @@ public class SignUp extends AppCompatActivity {
 
     }
 
+    private void createUser(final String fullname,final String email, final String username, final String contact, final String password){
 
+    }
 }
