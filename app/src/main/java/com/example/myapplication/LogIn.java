@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class LogIn extends AppCompatActivity {
@@ -16,6 +18,10 @@ public class LogIn extends AppCompatActivity {
     private TextView mSignUp;
     private Button mSignIn;
     private ProgressBar mProgress;
+
+    // Volley Variables
+    private RequestQueue mRequestQueue;
+    private StringRequest mStringRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
