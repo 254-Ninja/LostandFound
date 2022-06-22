@@ -1,8 +1,10 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +29,9 @@ public class SignUp extends AppCompatActivity {
 
     private TextInputEditText sfullname, semail, scontact, susername, spassword;
     private Button buttonSignUp;
+    private TextView slogin;
+
+
 
     // Volley variables
     private StringRequest mStringRequest;
@@ -42,7 +47,17 @@ public class SignUp extends AppCompatActivity {
         scontact = findViewById(R.id.contact);
         susername = findViewById(R.id.username);
         spassword = findViewById(R.id.password);
+        slogin = findViewById(R.id.loginText);
         buttonSignUp = findViewById(R.id.buttonSignUp);
+
+        slogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(SignUp.this, LogIn.class));
+
+            }
+        });
 
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
