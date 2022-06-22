@@ -45,6 +45,20 @@ public class LogIn extends AppCompatActivity {
 
             }
         });
+        mSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(LogIn.this,LogIn.class);
+                intent.putExtra("email",mEmail.getText().toString());
+                startActivity(intent);
+
+                // signIn(mEmail.getText().toString(), mPassword.getText().toString());
+            }
+        });
+
+    }
 
 
     }
