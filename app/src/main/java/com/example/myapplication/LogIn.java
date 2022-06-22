@@ -8,10 +8,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputEditText;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LogIn extends AppCompatActivity {
 
@@ -41,7 +53,7 @@ public class LogIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(LogIn.this,SignUp.class));
+                startActivity(new Intent(LogIn.this, SignUp.class));
 
             }
         });
@@ -50,8 +62,8 @@ public class LogIn extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent intent = new Intent(LogIn.this,LogIn.class);
-                intent.putExtra("email",mEmail.getText().toString());
+                Intent intent = new Intent(LogIn.this, LogIn.class);
+                intent.putExtra("email", mEmail.getText().toString());
                 startActivity(intent);
 
                 // signIn(mEmail.getText().toString(), mPassword.getText().toString());
@@ -60,6 +72,74 @@ public class LogIn extends AppCompatActivity {
 
     }
 
+        private void signIn( final String email, final String password) {
+
+            mProgress.setVisibility(View.VISIBLE);
+            // Initializing Request queue
+            mRequestQueue = Volley.newRequestQueue(LogIn.this);
+
+            mStringRequest = new StringRequest(Request.Method.POST,
+                    getBaseUrl(), new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+
+                        String success = jsonObject.getString("success");
+                        String message = jsonObject.getString("message");
+
+                        if (success.equals("1")) {
+
+                            mProgress.setVisibility(View.GONE);
+                            Toast.makeText(LogIn.this,message,Toast.LENGTH_SHORT).show();
+                            // Finish
+                            finish();
+                            // Start activity dashboard
+                            startActivity(new Intent(LogIn.this,LogIn.class));
+                        }
+                        if (success.equals("0")) {
+
+                            mProgress.setVisibility(View.GONE);
+                            Toast.makeText(LogIn.this,message,Toast.LENGTH_SHORT).show();
+                        }
+
+                    } catch (JSONException e) {
+
+                        mProgress.setVisibility(View.GONE);
+                        Toast.makeText(LogIn.this,e.toString(),Toast.LENGTH_SHORT).show();
+
+                    }
+
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+
+                    mProgress.setVisibility(View.GONE);
+                    Toast.makeText(LogIn.this,error.toString(),Toast.LENGTH_SHORT).show();
+
+                }
+            }) {
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+
+                    Map<String, String> params = new HashMap<>();
+                    params.put("email",email);
+                    params.put("password",password);
+
+                    return params;
+                }
+            };
+
+            mStringRequest.setShouldCache(false);
+            mRequestQueue.add(mStringRequest);
+        }
+
+
+        private String getBaseUrl (){
+            return "http://"+getResources().getString(R.string.machine_ip_address)+"/LoginRegister/signup";
+        }
+
 
     }
-}
