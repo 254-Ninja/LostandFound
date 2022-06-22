@@ -26,8 +26,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:targetApi="jelly_bean" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutFullname"
@@ -48,8 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_perm_contact_calendar_24"
-                android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                android:fontFamily="@font/poppinsmedium" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -70,8 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_alternate_email_24"
-                android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                android:fontFamily="@font/poppinsmedium"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -92,8 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_phone_24"
-                android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                android:fontFamily="@font/poppinsmedium"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -116,8 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_person_24"
-                android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                android:fontFamily="@font/poppinsmedium" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -136,8 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_lock_24"
-                android:fontFamily="@font/poppinsmedium"
-                tools:targetApi="jelly_bean" />
+                android:fontFamily="@font/poppinsmedium" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <ProgressBar
@@ -169,8 +163,7 @@
             android:text="@string/loginhere"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonSignUp"
-            tools:targetApi="jelly_bean" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

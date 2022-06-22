@@ -5,6 +5,7 @@ plugins {
 android {
     compileSdk 31
 
+
     defaultConfig {
         applicationId "com.example.myapplication"
         minSdk 21
