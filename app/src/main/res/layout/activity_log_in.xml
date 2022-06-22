@@ -37,14 +37,15 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:fontFamily="@font/poppinsbold"
-        android:hint="username"
+        android:hint="email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username"
+            android:id="@+id/email"
+            android:inputType="textEmailAddress"
             android:background="@color/grayLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

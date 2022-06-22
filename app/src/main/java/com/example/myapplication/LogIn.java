@@ -28,6 +28,13 @@ public class LogIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
+        // Getting UI views from our xml file
+        mEmail = findViewById(R.id.email);
+        mPassword = findViewById(R.id.password);
+        mSignIn = findViewById(R.id.buttonLogin);
+        mSignUp = findViewById(R.id.signUpText);
+        mProgress = findViewById(R.id.progress);
+
 
     }
 }
