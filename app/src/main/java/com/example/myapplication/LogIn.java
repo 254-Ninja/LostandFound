@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -34,6 +36,15 @@ public class LogIn extends AppCompatActivity {
         mSignIn = findViewById(R.id.buttonLogin);
         mSignUp = findViewById(R.id.signUpText);
         mProgress = findViewById(R.id.progress);
+
+        mSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(LogIn.this,SignUp.class));
+
+            }
+        });
 
 
     }
