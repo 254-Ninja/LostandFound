@@ -27,10 +27,9 @@ import java.util.Map;
 
 public class SignUp extends AppCompatActivity {
 
-    private TextInputEditText sfullname, semail, scontact, susername, spassword;
+    private TextInputEditText sfullname, semail, scontact, slastname, spassword;
     private Button buttonSignUp;
     private TextView slogin;
-
 
 
     // Volley variables
@@ -42,10 +41,10 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        sfullname = findViewById(R.id.fullname);
+        sfullname = findViewById(R.id.firstname);
         semail = findViewById(R.id.email);
         scontact = findViewById(R.id.contact);
-        susername = findViewById(R.id.username);
+        slastname = findViewById(R.id.lastname);
         spassword = findViewById(R.id.password);
         slogin = findViewById(R.id.loginText);
         buttonSignUp = findViewById(R.id.buttonSignUp);
@@ -62,7 +61,7 @@ public class SignUp extends AppCompatActivity {
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createUser(sfullname.getText().toString(),semail.getText().toString(),susername.getText().toString(),scontact.getText().toString(),spassword.getText().toString());
+                createUser(sfullname.getText().toString(),semail.getText().toString(),slastname.getText().toString(),scontact.getText().toString(),spassword.getText().toString());
             }
         });
 
