@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grayLight"
+    android:orientation="vertical"
     tools:context=".LostForm">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/intro"
@@ -24,12 +21,9 @@
             tools:layout_editor_absoluteY="30dp" />
 
 
-    </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="99dp"
         android:gravity="center">
 
         <EditText
@@ -44,21 +38,23 @@
             android:layout_height="wrap_content"
             android:id="@+id/bt_submit"
             android:text="Submit"/>
+
     </LinearLayout>
 
-             <RelativeLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/tv_address"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:text="Address" />
-             </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+                    <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Address" />
 
 
 
+    </RelativeLayout>
 
 
-
-</RelativeLayout>
+</LinearLayout>
