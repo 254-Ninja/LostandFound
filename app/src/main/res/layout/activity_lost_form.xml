@@ -8,17 +8,37 @@
     android:orientation="vertical"
     tools:context=".LostForm">
 
-        <TextView
-            android:id="@+id/intro"
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:text="File report form"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtgeneraldescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="General Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/GeneralDescription"
+            android:background="@color/grayLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppinsbold"
-            android:gravity="center"
-            android:paddingTop="40dp"
-            android:text="File report form"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            tools:layout_editor_absoluteY="30dp" />
+            android:fontFamily="@font/poppinsmedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
     <LinearLayout
@@ -29,32 +49,42 @@
         <EditText
             android:id="@+id/et_place"
             android:layout_width="0dp"
+            android:fontFamily="@font/poppinsmedium"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Last identifiable location"
             android:minHeight="48dp" />
+
         <Button
+            android:id="@+id/bt_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bt_submit"
-            android:text="Submit"/>
+            android:text="Submit" />
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
-                    <TextView
-                android:id="@+id/tv_address"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="Address" />
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:text="Address" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pick_time"
+            android:onClick="showTimePickerDialog" />
 
 
-
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </LinearLayout>
