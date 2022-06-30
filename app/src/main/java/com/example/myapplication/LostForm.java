@@ -35,7 +35,7 @@ public class LostForm extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String address = etPlace.getText().toString();
-                GeoLocation geoLocation = new Geolocation();
+                Geolocation geoLocation = new Geolocation();
             }
         });
 
