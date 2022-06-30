@@ -8,11 +8,16 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
 
 public class LostForm extends AppCompatActivity {
+
+    EditText etPlace;
+    Button btSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,7 @@ public class LostForm extends AppCompatActivity {
 
 
     }
+
     public static class TimePickerFragment extends DialogFragment
             implements TimePickerDialog.OnTimeSetListener {
 
