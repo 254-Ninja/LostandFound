@@ -38,6 +38,8 @@ public class Geolocation {
                         message.what = 1;
                         Bundle bundle = new Bundle();
                         result = "Address : "+locationAddress+ "\n\n\nLatitude And Longitude\n"+result;
+                        bundle.putString("address",result);
+                        message.setData();
                 }
             }
         }
