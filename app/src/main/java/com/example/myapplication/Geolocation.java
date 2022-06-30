@@ -39,9 +39,11 @@ public class Geolocation {
                         Bundle bundle = new Bundle();
                         result = "Address : "+locationAddress+ "\n\n\nLatitude And Longitude\n"+result;
                         bundle.putString("address",result);
-                        message.setData();
+                        message.setData(bundle);
                 }
+                message.sendToTarget();
             }
-        }
+        };
+        thread.start();
     }
 }
