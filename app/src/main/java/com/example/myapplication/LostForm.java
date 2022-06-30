@@ -10,6 +10,7 @@ import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
@@ -18,12 +19,24 @@ public class LostForm extends AppCompatActivity {
 
     EditText etPlace;
     Button btSubmit;
+    TextView tvAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost_form);
 
+        etPlace = findViewById(R.id.et_place);
+        btSubmit = findViewById(R.id.bt_submit);
+        tvAddress = findViewById(R.id.tv_address);
+
+        btSubmit.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
 
     }
 
