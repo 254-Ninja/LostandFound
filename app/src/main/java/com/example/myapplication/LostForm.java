@@ -75,8 +75,12 @@ public class LostForm extends AppCompatActivity {
             switch (msg.what){
                 case 1:
                     Bundle bundle = msg.getData();
-                    address = bundle.getString( "address");
+                    address = bundle.getString("address");
+                    break;
+                default:
+                    address = null;
             }
+            tvAddress.setText(address);
         }
     }
 }
