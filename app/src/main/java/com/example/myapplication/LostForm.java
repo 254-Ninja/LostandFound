@@ -6,6 +6,8 @@ import androidx.fragment.app.DialogFragment;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +38,7 @@ public class LostForm extends AppCompatActivity {
             public void onClick(View v) {
                 String address = etPlace.getText().toString();
                 Geolocation geoLocation = new Geolocation();
+                geoLocation.getAddress(address,getApplicationContext(), new GeoHandler());
             }
         });
 
@@ -63,5 +66,17 @@ public class LostForm extends AppCompatActivity {
     public void showTimePickerDialog(View v) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
+    }
+
+    private class GeoHandler extends Handler {
+        @Override
+        public void handleMessage(Message msg) {
+            String address;
+            switch (msg.what){
+                case 1:
+                    Bundle bundle = msg.getData();
+                    address = bundle.getString( "address");
+            }
+        }
     }
 }
