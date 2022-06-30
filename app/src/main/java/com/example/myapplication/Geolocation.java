@@ -3,6 +3,8 @@ package com.example.myapplication;
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
+import android.os.Bundle;
+import android.os.Message;
 
 import java.io.IOException;
 import java.util.List;
@@ -23,9 +25,19 @@ public class Geolocation {
                     if (addressList != null && addressList.size() > 0){
                         Address address = (Address) addressList.get(0);
                         StringBuilder stringBuilder = new StringBuilder();
+                        stringBuilder.append(address.getLatitude()).append("\n");
+                        stringBuilder.append(address.getLongitude()).append("\n");
+                        result = stringBuilder.toString();
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
+                }finally {
+                    Message message = Message.obtain();
+                    message.setTarget(handler);
+                    if (result != null);
+                        message.what = 1;
+                        Bundle bundle = new Bundle();
+                        result = "Address : "+locationAddress+ "\n\n\nLatitude And Longitude\n"+result;
                 }
             }
         }
