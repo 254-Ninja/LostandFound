@@ -30,9 +30,9 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="Match items from our database"
+            android:text="Report your lost item, and we will help you recover it within minutes"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="@dimen/slide_desc" />
 
     </LinearLayout>
