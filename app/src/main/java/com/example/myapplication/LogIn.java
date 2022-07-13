@@ -138,7 +138,7 @@ public class LogIn extends AppCompatActivity {
 
 
         private String getBaseUrl (){
-            return "http://"+getResources().getString(R.string.machine_ip_address)+"/LoginRegister/signup";
+            return "http://"+getResources().getString(R.string.machine_ip_address)+"/Android/login";
         }
 
 

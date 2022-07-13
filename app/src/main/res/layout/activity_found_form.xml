@@ -77,12 +77,7 @@
             android:gravity="center"
             android:text="Address" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppinsmedium"
-            android:text="pick time"
-            android:onClick="showTimePickerDialog" />
+
 
 
     </LinearLayout>
