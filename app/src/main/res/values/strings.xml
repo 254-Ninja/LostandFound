@@ -25,4 +25,7 @@
 
     <string name="machine_ip_address">192.168.0.102</string>
     <string name="first_name">First name</string>
+    <string name="submit">Submit</string>
+    <string name="dataSubmit">Submit</string>
+    <string name="genDescriptionSubmit">Submit</string>
 </resources>

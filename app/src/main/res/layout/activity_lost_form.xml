@@ -59,7 +59,7 @@
             android:id="@+id/bt_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit" />
+            android:text="@string/genDescriptionSubmit" />
 
     </LinearLayout>
 
@@ -84,6 +84,25 @@
             android:fontFamily="@font/poppinsmedium"
             android:text="pick time"
             android:onClick="showTimePickerDialog" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/submitData"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:text="@string/dataSubmit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_picker" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
