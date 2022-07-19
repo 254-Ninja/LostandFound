@@ -24,6 +24,7 @@
         android:id="@+id/txtgeneraldescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="50dp"
         android:hint="General Description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,7 +35,10 @@
             android:background="@color/grayLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppinsmedium" />
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/intro"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,6 +48,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="50dp"
         android:gravity="center">
 
         <EditText
@@ -66,6 +71,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="50dp"
         android:orientation="vertical">
 
 
@@ -95,7 +101,7 @@
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="150dp"
             android:gravity="center"
             android:text="@string/dataSubmit"
             app:layout_constraintEnd_toEndOf="parent"
