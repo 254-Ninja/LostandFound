@@ -15,6 +15,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.google.android.material.textfield.TextInputEditText;
+
 import java.util.Calendar;
 
 public class LostForm extends AppCompatActivity {
@@ -22,6 +26,15 @@ public class LostForm extends AppCompatActivity {
     EditText etPlace;
     Button btSubmit;
     TextView tvAddress;
+
+    private TextInputEditText GeneralDescription, et_place;
+    private Button bt_submit;
+    private Button time_picker;
+
+
+    // Volley variables
+    private StringRequest mStringRequest;
+    private RequestQueue mRequestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
