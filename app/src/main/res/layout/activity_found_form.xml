@@ -9,7 +9,7 @@
     tools:context=".foundForm">
 
     <TextView
-        android:id="@+id/intro"
+        android:id="@+id/introFound"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsmedium"
@@ -21,20 +21,24 @@
         tools:layout_editor_absoluteY="30dp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtgeneraldescription"
+        android:id="@+id/txtgeneraldescriptionFound"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="50dp"
         android:hint="General Description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/GeneralDescription"
+            android:id="@+id/GeneralDescriptionFound"
             android:background="@color/grayLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppinsmedium" />
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/introFound"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,10 +48,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="50dp"
         android:gravity="center">
 
         <EditText
-            android:id="@+id/et_place"
+            android:id="@+id/et_place_Found"
             android:layout_width="0dp"
             android:fontFamily="@font/poppinsmedium"
             android:layout_height="wrap_content"
@@ -56,28 +61,54 @@
             android:minHeight="48dp" />
 
         <Button
-            android:id="@+id/bt_submit"
+            android:id="@+id/bt_submit_Found"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit" />
+            android:text="@string/genDescriptionSubmit" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="50dp"
         android:orientation="vertical">
 
 
         <TextView
-            android:id="@+id/tv_address"
+            android:id="@+id/tv_address_Found"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:fontFamily="@font/poppinsmedium"
             android:gravity="center"
             android:text="Address" />
 
+        <Button
+            android:id="@+id/time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="pick time"
+            android:onClick="showTimePickerDialog" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/submitData"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:gravity="center"
+                android:text="@string/dataSubmit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/time_pickerFound" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
