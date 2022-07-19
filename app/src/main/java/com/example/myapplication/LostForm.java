@@ -27,10 +27,7 @@ public class LostForm extends AppCompatActivity {
     Button btSubmit;
     TextView tvAddress;
 
-    private TextInputEditText GeneralDescription, et_place;
-    private Button bt_submit;
-    private Button time_picker;
-
+    private TextInputEditText GeneralDescription;
 
     // Volley variables
     private StringRequest mStringRequest;
@@ -44,6 +41,8 @@ public class LostForm extends AppCompatActivity {
         etPlace = findViewById(R.id.et_place);
         btSubmit = findViewById(R.id.bt_submit);
         tvAddress = findViewById(R.id.tv_address);
+        GeneralDescription = findViewById(R.id.GeneralDescription);
+
 
         btSubmit.setOnClickListener(new View.OnClickListener() {
 
