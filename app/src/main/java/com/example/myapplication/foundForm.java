@@ -25,6 +25,7 @@ public class foundForm extends AppCompatActivity {
 
     EditText etPlaceFound;
     Button btSubmitFound;
+    Button submitDataFound;
     TextView tvAddressFound;
 
     private TextInputEditText GeneralDescriptionFound;
@@ -54,6 +55,16 @@ public class foundForm extends AppCompatActivity {
             }
         });
 
+        submitDataFound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createUser(tvAddressFound.getText().toString(),GeneralDescriptionFound.getText().toString());
+            }
+        });
+
+    }
+
+    private void createUser(String toString, String toString1) {
     }
 
     public static class TimePickerFragment extends DialogFragment
