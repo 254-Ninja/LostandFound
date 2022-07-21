@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -28,6 +29,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class foundForm extends AppCompatActivity {
 
@@ -112,7 +115,21 @@ public class foundForm extends AppCompatActivity {
                 btSubmitFound.setText("Submit");
 
             }
-        })
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<>();
+                params.put("GeneralDescriptionFound",GeneralDescriptionFound);
+                params.put("tvAddressFound",tvAddressFound);
+
+                return params;
+            }
+        };
+
+        mStringRequest.setShouldCache(false);
+        mRequestQueue.add(mStringRequest);
+    }
 
     public static class TimePickerFragment extends DialogFragment
             implements TimePickerDialog.OnTimeSetListener {

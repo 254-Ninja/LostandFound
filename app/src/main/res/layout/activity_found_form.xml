@@ -76,7 +76,7 @@
 
 
         <TextView
-            android:id="@+id/tv_addressFound"
+            android:id="@+id/tvAddressFound"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:fontFamily="@font/poppinsmedium"
