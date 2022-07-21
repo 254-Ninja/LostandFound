@@ -14,10 +14,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputEditText;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Calendar;
 
@@ -64,8 +71,39 @@ public class foundForm extends AppCompatActivity {
 
     }
 
-    private void createUser(String toString, String toString1) {
-    }
+    private void createUser(final String tvAddressFound,final String GeneralDescriptionFound){
+
+        mRequestQueue = Volley.newRequestQueue(foundForm.this);
+        // Progress
+        btSubmitFound.setText("updating info...");
+
+        mStringRequest = new StringRequest(Request.Method.POST, getBaseUrl(), new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+
+                    String success = jsonObject.getString("success");
+                    String message = jsonObject.getString("message");
+
+                    if (success.equals("1")) {
+
+                        Toast.makeText(foundForm.this,message,Toast.LENGTH_SHORT).show();
+                        btSubmitFound.setText("submit");
+
+
+                    }
+
+                }catch (JSONException e) {
+
+                    Toast.makeText(foundForm.this,e.toString(),Toast.LENGTH_LONG).show();
+                    btSubmitFound.setText("Submit");
+
+                }
+
+            }
+        }
 
     public static class TimePickerFragment extends DialogFragment
             implements TimePickerDialog.OnTimeSetListener {
