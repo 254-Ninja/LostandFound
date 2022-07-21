@@ -14,12 +14,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputEditText;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LostForm extends AppCompatActivity {
 
@@ -52,10 +63,75 @@ public class LostForm extends AppCompatActivity {
             public void onClick(View v) {
                 String address = etPlace.getText().toString();
                 Geolocation geoLocation = new Geolocation();
-                geoLocation.getAddress(address,getApplicationContext(), new GeoHandler());
+                geoLocation.getAddress(address,getApplicationContext(), new LostForm.GeoHandler());
+            }
+        });
+        submitData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createUser(tvAddress.getText().toString(),GeneralDescription.getText().toString());
             }
         });
 
+    }
+
+    private void createUser(final String tvAddress,final String GeneralDescription){
+
+        mRequestQueue = Volley.newRequestQueue(LostForm.this);
+        // Progress
+        submitData.setText("updating info...");
+
+        mStringRequest = new StringRequest(Request.Method.POST, getBaseUrl(), new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+
+                    String success = jsonObject.getString("success");
+                    String message = jsonObject.getString("message");
+
+                    if (success.equals("1")) {
+
+                        Toast.makeText(LostForm.this,message,Toast.LENGTH_SHORT).show();
+                        submitData.setText("submit");
+
+
+                    }
+
+                }catch (JSONException e) {
+
+                    Toast.makeText(LostForm.this,e.toString(),Toast.LENGTH_LONG).show();
+                    submitData.setText("Submit");
+
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(LostForm.this,error.toString(),Toast.LENGTH_LONG).show();
+                submitData.setText("Submit");
+
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<>();
+                params.put("GeneralDescription",GeneralDescription);
+                params.put("tvAddress",tvAddress);
+
+                return params;
+            }
+        };
+
+        mStringRequest.setShouldCache(false);
+        mRequestQueue.add(mStringRequest);
+    }
+    private String getBaseUrl (){
+        return "http://"+getResources().getString(R.string.machine_ip_address)+"/Android/sign_up";
     }
 
     public static class TimePickerFragment extends DialogFragment
