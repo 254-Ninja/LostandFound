@@ -52,7 +52,7 @@ public class foundForm extends AppCompatActivity {
 
         etPlaceFound = findViewById(R.id.et_placeFound);
         btSubmitFound = findViewById(R.id.bt_submitFound);
-        tvAddressFound = findViewById(R.id.tv_addressFound);
+        tvAddressFound = findViewById(R.id.tvAddressFound);
         GeneralDescriptionFound = findViewById(R.id.GeneralDescriptionFound);
 
 
@@ -129,6 +129,9 @@ public class foundForm extends AppCompatActivity {
 
         mStringRequest.setShouldCache(false);
         mRequestQueue.add(mStringRequest);
+    }
+    private String getBaseUrl (){
+        return "http://"+getResources().getString(R.string.machine_ip_address)+"/Android/sign_up";
     }
 
     public static class TimePickerFragment extends DialogFragment
