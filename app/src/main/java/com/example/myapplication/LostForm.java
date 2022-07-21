@@ -25,6 +25,7 @@ public class LostForm extends AppCompatActivity {
 
     EditText etPlace;
     Button btSubmit;
+    Button submitData;
     TextView tvAddress;
 
     private TextInputEditText GeneralDescription;
@@ -40,6 +41,7 @@ public class LostForm extends AppCompatActivity {
 
         etPlace = findViewById(R.id.et_place);
         btSubmit = findViewById(R.id.bt_submit);
+        submitData = findViewById(R.id.submitData);
         tvAddress = findViewById(R.id.tv_address);
         GeneralDescription = findViewById(R.id.GeneralDescription);
 

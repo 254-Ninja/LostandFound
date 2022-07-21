@@ -52,6 +52,7 @@ public class foundForm extends AppCompatActivity {
 
         etPlaceFound = findViewById(R.id.et_placeFound);
         btSubmitFound = findViewById(R.id.bt_submitFound);
+        submitDataFound = findViewById(R.id.submitDataFound);
         tvAddressFound = findViewById(R.id.tvAddressFound);
         GeneralDescriptionFound = findViewById(R.id.GeneralDescriptionFound);
 
